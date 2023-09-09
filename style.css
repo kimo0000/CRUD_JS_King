@@ -1,0 +1,142 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to left, #af2412, #fa5472, #125);
+}
+
+.container {
+  width: 50%;
+  text-align: center;
+  border: 3px solid #fff;
+  border-radius: 12px;
+  background-color: #eee;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  display: grid;
+  grid-template: auto auto 1fr / 1fr;
+  gap: 15px;
+}
+
+.alert {
+  color: #fff;
+  border-radius: 12px;
+}
+
+.danger {
+  background-color: red;
+}
+
+.success {
+  background-color: green;
+}
+
+h1 {
+  padding: 10px;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 20%;
+  background-color: red;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+form .inp {
+  width: 80%;
+  padding: 10px;
+}
+
+form .btn_submit {
+  width: 20%;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form .btn_submit:hover {
+  opacity: 0.5;
+}
+
+.check {
+  text-decoration-line: line-through;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  visibility: hidden;
+}
+
+.show_container {
+  visibility: visible;
+}
+
+.result .items {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.result .items:hover {
+  background-color: #ddd;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn_clear {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid blueviolet;
+  width: fit-content;
+  margin: 10px auto 0;
+  background-color: rgb(111, 74, 24);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn_clear:hover {
+  opacity: 0.5;
+}
